@@ -80,17 +80,17 @@ const FormPage = ({onFormSubmit}) => {
     return (
 
         <div>
-            <h2>Fill out the form to get your lifespan estimate.</h2>
+            <h2 style={{ color: 'white' }}>Fill out the form to get your lifespan estimate.</h2>
 
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="birthDate">Birth date:</label>
+                    <label htmlFor="birthDate" style={{ color: 'white' }}>Birth date:</label>
                     <div>
                         <DatePicker selected = {formData.birthDate} onChange={handleDateChange}/>
                     </div>
                 </div>
                 <div>
-                    <label htmlFor="sex">Sex:</label>
+                    <label htmlFor="sex" style={{ color: 'white' }}>Sex:</label>
                     <select
                         id="sex"
                         name="sex"
@@ -104,7 +104,7 @@ const FormPage = ({onFormSubmit}) => {
                     </select>
                 </div>
                 <div>
-                    <label htmlFor="smoke">Do you smoke:</label>
+                    <label htmlFor="smoke" style={{ color: 'white' }}>Do you smoke nicotine:</label>
                     <select
                         id="smoke"
                         name="smoke"
