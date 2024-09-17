@@ -38,8 +38,5 @@
     ]
   },
   "proxy": "http://127.0.0.1:5000",
-  "devDependencies": {
-    "axois": "^0.0.1-security",
-    "react-router-dom": "^6.23.1"
-  }
+  "devDependencies": { "react-router-dom": "^6.23.1"}
 }
