@@ -27,18 +27,26 @@ def submit():
 
     # Calculate Life Expectancy
     if sex.lower() == 'male':
-        expected_age = 80
+        expected_age = 75
     elif sex.lower() == 'female':
-        expected_age = 85
+        expected_age = 80
     else:
         return jsonify({'status': 'error', 'message': 'Invalid sex value'})
     
-    if smoke.lower() == 'yes':
-        expected_age -= 15
-
     #Calculate Age
     birth_datetime_obj = datetime.strptime(birth_date.split('T')[0], '%Y-%m-%d')  # Parse string to datetime object
     current_age_sec = (datetime.now() - birth_datetime_obj).total_seconds()
+    current_age_year = datetime.now().year- birth_datetime_obj.year
+    
+    if smoke.lower() == 'yes':
+        if current_age_year < 34:
+            expected_age -= 10
+        elif current_age_year < 44:
+            expected_age -= 9
+        else:
+            expected_age -=6
+
+    
 
     #Calculate TLTL
     remainingSeconds = (expected_age*365*24*60*60) - current_age_sec
