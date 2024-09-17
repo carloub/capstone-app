@@ -107,14 +107,6 @@ function App() {
                     (currentTime !== 0 ? <Timer initialTime={remainingSeconds}/> : <p>Loading...</p>)
                     : <h2>Please fill out the form first</h2>}
             </header>
-
-            <img src={logo} className="App-logo" alt="logo" />
-            <p><a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-            >Learn React</a></p>
         </div>
     );
 }
