@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
 
 const InfoPage = () => {
     return (
-        <div>
+        <div style={{ color: 'white' }}>
             <h2>Info</h2>
             <p>This project estimates your lifespan based off of your responses to the form.</p>
             <p>You can watch your time tick away!</p>
